@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+	<title>localStorage</title>
+</head>
+<body>
+	<div class="main-site">
+		<div class="success-message" style="display:none">Team Member Added successfully</div>
+		<div class="error-message" style="display:none"></div>
+		<div class="container">
+		<div class="form-title">
+			<h2>Add Team Member</h2>
+		</div>
+		<div class="form-fields">
+			<div class="form-fields__inner">
+			<div class="form-row">
+				<div class="form-field">
+					<input type="text" class="title" placeholder="Member name">
+					<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M272 304h-96C78.8 304 0 382.8 0 480c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32C448 382.8 369.2 304 272 304zM48.99 464C56.89 400.9 110.8 352 176 352h96c65.16 0 119.1 48.95 127 112H48.99zM224 256c70.69 0 128-57.31 128-128c0-70.69-57.31-128-128-128S96 57.31 96 128C96 198.7 153.3 256 224 256zM224 48c44.11 0 80 35.89 80 80c0 44.11-35.89 80-80 80S144 172.1 144 128C144 83.89 179.9 48 224 48z"/></svg>
+				</div>
+				<div class="form-field">
+					<input type="text" class="designation" placeholder="Enter Designation">
+					<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M320 0H64C28.65 0 0 28.65 0 64v384c0 35.35 28.65 64 64 64h256c35.35 0 64-28.65 64-64V64C384 28.65 355.3 0 320 0zM336 448c0 8.836-7.164 16-16 16H64c-8.836 0-16-7.164-16-16V64c0-8.838 7.164-16 16-16h64V64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32V48h64c8.836 0 16 7.162 16 16V448zM192 288c35.35 0 64-28.65 64-64s-28.65-64-64-64C156.7 160 128 188.7 128 224S156.7 288 192 288zM224 320H160c-44.18 0-80 35.82-80 80C80 408.8 87.16 416 96 416h192c8.836 0 16-7.164 16-16C304 355.8 268.2 320 224 320z"/></svg>
+				</div>
+				<div class="form-field">
+					<label class="fileUpload" for="upload"><svg  xmlns="http://www.w3.org/2000/svg" width="5.561" height="7.6" viewBox="0 0 5.561 7.6">
+						<path id="uploadd" d="M5.061,6.6H3.281V1.891L4.595,3.206A.5.5,0,0,0,5.3,2.5L2.8,0,.258,2.546a.5.5,0,1,0,.706.707L2.281,1.937V6.6H.5a.5.5,0,0,0,0,1H5.061a.5.5,0,0,0,0-1"/>
+					</svg>Upload image</label>
+					<input type="file" id="upload" class="image" onchange="readURL(this);" style="display:none">
+					
+				</div>
+				<div class="form-field" id="img-field" style="display:none;">
+					<img id="userImg" src="" alt="image">
+				</div>
+				<div class="form-field">
+					<button class="submit" type="submit">Submit</button>
+					
+				</div>
+			</div>
+			</div>
+		</div>
+		<div class="main-result" style="display:none;">
+			<div class="top-heading">
+				<div class="heading">
+					<h2>Team Members</h2>
+				</div>
+				<div class="top-button">
+					<a class="btn-primary" href="">Remove all memebers</a>
+				</div>
+			</div>
+			<div id="result" class="user-row"></div>
+		</div>
+		</div>
+	</div>
+	<script src="js/main.js"></script>
+</body>
+</html>
